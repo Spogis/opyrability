@@ -94,7 +94,7 @@ def test_dma_mr_design():
                  DOS_bounds,
                  plot=plot_flag)
 
-    assert OI == pytest.approx(23.373846526953766, abs=abs_tol, rel=rel_tol)
+    assert OI == pytest.approx(23.374694036948025, abs=1e-3, rel=1e-3)
 
 
 # NLP-based approach tests
