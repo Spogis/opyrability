@@ -425,7 +425,11 @@ def OI_eval(AS: pc.Region,
             pass
         else:
             inter_list.append(intersection)
-            
+
+    if len(inter_list) == 0:
+        print('No intersection found between AS and DS. OI = 0.')
+        return 0.0
+
     overlapped_intersection = pc.Region(inter_list)
     min_coord =  overlapped_intersection.bounding_box[0]
     max_coord =  overlapped_intersection.bounding_box[1]
